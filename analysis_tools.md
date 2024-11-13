@@ -55,3 +55,9 @@ MFTECmd -f "$MFTファイル" --de [シーケンス番号-入力]
 
 
 [サイバーセキュリティ担当者向け、おすすめツール、サイト、勉強本](https://qiita.com/eguchi7309/items/475e030fd52c013911e8)
+
+***
+# tesseract
+```
+sudo apt-get install tesseract-ocr
+```
