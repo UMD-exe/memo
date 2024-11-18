@@ -152,7 +152,7 @@ PadBusterがあれば比較的簡単に実行可能。
 
 
 
-参考資料：
+参考資料：  
 [Padding Oracle Attack 分かりやすく解説したい](https://partender810.hatenablog.com/entry/2021/06/08/225105)
 [PadBuster](https://github.com/AonCyberLabs/PadBuster)
 [PadBuster によるパディング Oracle 攻撃の自動化](https://cyber.aon.com/aon_cyber_labs/automated-padding-oracle-attacks-with-padbuster/)
@@ -230,6 +230,35 @@ CheckOutするときに、Cart内のデータが送信されている。
 すると商品を０円で購入できる。
 
 </details>
+
+***
+
+### hydra
+
+<details><summary>詳細</summary>
+
+#### hydraとは
+パスワードクラックを行うツールです。  
+SSHやFTPなどのサービスや、webアプリのログインフォームに対して攻撃が出来ます。  
+攻撃時は、あらかじめ攻撃する値を記載したファイルを利用することが出来ます。  
+
+#### 使い方
+
+```  
+hydra -L [ユーザー名リスト] -P [パスワードリスト] [モジュール]://[ターゲットURL]/[パス]:[パラメータ]:[失敗時のメッセージ]
+```
+
+(例)
+```
+hydra -L /ShareVM/names.txt -P /usr/share/wordlists/rockyou.txt https-post-form://55b6113105a5aa5d6f41ba91e2c857f4.ctf.hacker101.com "/login.php:username=^USER^&password=^PASS^:F=incorrect"
+```
+
+参考資料：  
+[kali linuxでhydraを使ってパスワードクラックをしてみた](https://qiita.com/miya_zato/items/0c32dc71208460515e34)  
+[names.txt](https://github.com/danielmiessler/SecLists/blob/master/Usernames/Names/names.txt?source=post_page-----8001ba11ed9c--------------------------------) ダウンロード先  
+
+</details>
+
 
 錬成環境：
 [hacker101](https://ctf.hacker101.com/ctf)
