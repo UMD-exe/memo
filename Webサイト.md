@@ -204,6 +204,9 @@ CheckOutするときに、Cart内のデータが送信されている。
 
 "price": 0.00にしてみる。
 
+![image](https://github.com/user-attachments/assets/1addabe3-158a-45e9-9cc7-6334c3fcf8fe)
+
+
 ![image](https://github.com/user-attachments/assets/16039a43-e031-4ab6-9c81-06b17a5949e6)
 
 こんな感じでコピペして、値を改ざんできる。
