@@ -1,8 +1,9 @@
 ### base64一括
 
 # base64 ライブラリをインポートして、Base64デコード機能を利用
-import base64
 ```
+import base64
+
 # 入力ファイルと出力ファイルのパスを指定
 input_file = 'Base64.txt'  
 output_file = 'decoded_output.txt'
