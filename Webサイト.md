@@ -54,3 +54,6 @@ curl 10.6.255.116:3000/orders -b "bakeSaleVolunteer=dHJ1ZQ%3D%3D"
 
 錬成環境：
 [hacker101](https://ctf.hacker101.com/ctf)
+
+- 教訓
+サーバーに入る系の問題で管理者権限が与えられていない場合、 sudo -lを使用すると何をしたらいいのかわかることがある。
