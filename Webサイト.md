@@ -86,15 +86,11 @@ python sqlmap.py -u "http://example.jp/sql_injection-003.php" --data "ID=1&PWD=2
 | `--flush-session`   | セッションファイルを削除します。 |
 | `--batch`           | インタラクティブなプロンプトをスキップします（すべてのプロンプトに自動的に「yes」と答えます）。 |
 
-
-
-
-
-</details>  
-
 参考資料：  
 [SQL](https://qiita.com/shyamahira/items/9f80d16c3436f9dea753)  
 [アロワナ飼いたい](https://iomat.hatenablog.com/entry/2022/08/19/173528)  
+
+</details>  
 
 ***
 
