@@ -96,11 +96,12 @@ python sqlmap.py -u "http://example.jp/sql_injection-003.php" --data "ID=1&PWD=2
 
 ## Cookie
 ### curlでCookieを保存、送信する
+
+<details><summary>詳細</summary> 
+
 ```
 curl -b "KEY=VALUE" http://localhost
 ```
-
-<details><summary>詳細</summary> 
 
 例
 ```
