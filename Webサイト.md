@@ -28,8 +28,25 @@ python sqlmap.py -u "http://example.jp/sql_injection-003.php" --data "ID=1&PWD=2
 参考資料：
 [SQL](https://qiita.com/shyamahira/items/9f80d16c3436f9dea753)
 
-###
 
+## Cookie
+### curlでCookieを保存、送信する
+```
+curl -b "KEY=VALUE" http://localhost
+```
+
+<details><summary>詳細</summary> 
+
+例
+```
+curl 10.6.255.116:3000/orders -b "bakeSaleVolunteer=dHJ1ZQ%3D%3D"
+```
+
+参考資料：
+[curlでCookieを保存、送信する](https://qiita.com/shyamahira/items/9f80d16c3436f9dea753)
+[cookie の取得方法と curl で cookie を送信する方法](https://qiita.com/fmyuk/items/dec3992caa4fd4f574fd)
+
+</details>
 
 # トラバー
 
