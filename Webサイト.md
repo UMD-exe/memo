@@ -1,6 +1,7 @@
 # webExploit
 ## SQLインジェクション
 ### SQLmap
+<details><summary>詳細</summary>  
 - GETメソッドの場合の例:
 ```
 python sqlmap.py -u "http://example.jp/sql_injection-003.php?ID=1&PWD=2"
@@ -22,7 +23,7 @@ python sqlmap.py -u "http://example.jp/sql_injection-003.php" --data "ID=1&PWD=2
 ```
 ./sqlmap.py -u "URL" --data="ID=1&PWD=2" --dbms PostgreSQL
 ```
-
+</details>
 参考資料：
 [SQL](https://qiita.com/shyamahira/items/9f80d16c3436f9dea753)
 
