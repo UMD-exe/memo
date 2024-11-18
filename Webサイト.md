@@ -90,9 +90,11 @@ python sqlmap.py -u "http://example.jp/sql_injection-003.php" --data "ID=1&PWD=2
 
 
 
-</details>
-参考資料：
-[SQL](https://qiita.com/shyamahira/items/9f80d16c3436f9dea753)
+</details>  
+
+参考資料：  
+[SQL](https://qiita.com/shyamahira/items/9f80d16c3436f9dea753)  
+[アロワナ飼いたい](https://iomat.hatenablog.com/entry/2022/08/19/173528)  
 
 ***
 
@@ -173,7 +175,51 @@ phpinfo() ;
 
 </details>
 
+***
+
+## Burp Suite
+
+<details><summary>詳細</summary> 
+
+### Settings
+[KaliのBurpSuiteの簡単なセットアップ方法](https://qiita.com/labpixel/items/e42f8f28ccb78d057cb1)
+
+### 使用例
+#### Petshop Proの問題
+- 購入画面 
+
+![image](https://github.com/user-attachments/assets/09e6c43b-8cc4-4d17-aab3-b630cce23b69)
+
+カートに追加できる。２つともカートへ入れてみる。
+
+![image](https://github.com/user-attachments/assets/fdc89c26-bf3e-42be-a1ed-a07436835303)
+
+CheckOutするときに、Cart内のデータが送信されている。
+
+![image](https://github.com/user-attachments/assets/04c38031-f6f9-4a4d-b3b0-23c66127b3a2)
+
+これらをURLデコードすると中身がわかる。これらを改ざんしてみる。
+
+![image](https://github.com/user-attachments/assets/4f663c37-d7c1-4975-8fe1-a813b0f00318)    
+
+"price": 0.00にしてみる。
+
+![image](https://github.com/user-attachments/assets/16039a43-e031-4ab6-9c81-06b17a5949e6)
+
+こんな感じでコピペして、値を改ざんできる。
+
+![image](https://github.com/user-attachments/assets/feb98e69-9387-4022-bc94-7935984d1097)
+
+すると商品を０円で購入できる。
+
+</details>
+
 錬成環境：
 [hacker101](https://ctf.hacker101.com/ctf)
 
+
+
+
 - 教訓：サーバーに入る系の問題で管理者権限が与えられていない場合、 sudo -lを使用すると何をしたらいいのかわかることがある。
+
+
