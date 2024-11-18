@@ -92,6 +92,23 @@ python sqlmap.py -u "http://example.jp/sql_injection-003.php" --data "ID=1&PWD=2
 
 </details>  
 
+
+### SQLコマンド
+
+<details><summary>詳細</summary> 
+
+- SQLインジェクションの仕組み  
+![image](https://github.com/user-attachments/assets/aafebcec-8229-44ba-b16b-80276ec19cbd)
+
+[SQLインジェクション【SQL Injection】とは｜図でわかる脆弱性の仕組み](https://www.ubsecure.jp/blog/sql-injection)  ここにすべてわかりやすく書かれてる。
+
+
+参考資料：  
+[SQLインジェクションでデータベースを攻撃(!)してみよう](https://marunouchi-tech.i-studio.co.jp/2056/)  
+[SQLインジェクション【SQL Injection】とは｜図でわかる脆弱性の仕組み](https://www.ubsecure.jp/blog/sql-injection)  
+
+</details> 
+
 ***
 
 ## Cookie
