@@ -25,4 +25,4 @@ cp /proc/1234/fd/4 /path/to/recover_file
 「xxd」は、ファイルや標準入力から受け取った内容を16進数、または2進数でダンプするコマンドです。さらに16進ダンプから元のデータに復元できます。
 
 
-[strace](https://qiita.com/t_ymgt/items/7f13c89b08b889da2146)
+## [strace](https://qiita.com/t_ymgt/items/7f13c89b08b889da2146)
