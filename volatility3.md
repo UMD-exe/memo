@@ -29,22 +29,38 @@
 | `mac.tasks.Tasks`                      | 特定のMacメモリイメージに存在するプロセスをリストします。                                          |
 | `mac.trustedbsd.trustedbsd`            | 悪意のあるtrustedbsdモジュールがないかチェックします。                                         |
 | `timeliner.Timeliner`                  | 時間関連情報を提供するすべての関連プラグインを実行し、結果を時間順に並べます。                               |
+| `windows.bigpools.BigPools`            | 大きなページプールをリストアップします。                                                 |
+| `windows.cachedump.Cachedump`          | メモリからlsaシークレットをダンプします。                                                |
 | `windows.callbacks.Callbacks`          | カーネルコールバックおよび通知ルーチンをリストします。                                             |
 | `windows.cmdline.CmdLine`              | プロセスのコマンドライン引数をリストします。                                                  |
-| `windows.dlldump.DllDump`              | プロセスメモリ範囲をDLLとしてダンプします。                                                |
+| `windows.crashinfo.Crashinfo`          | Windowsのクラッシュダンプの情報をリストします。                                               |
+| `windows.devicetree.DeviceTree`        | 特定のWindowsメモリイメージにおけるドライバと付属デバイスに基づくツリーをリストします。                     |
 | `windows.dlllist.DllList`              | 特定のWindowsメモリイメージに読み込まれているモジュールをリストします。                                   |
-| `windows.driverirp.DriverIrp`          | 特定のWindowsメモリイメージのドライバのIRPをリストします。                                        |
+| `windows.driverirp.DriverIrp`          | 特定のWindowsメモリイメージ内のドライバのIRPをリストします。                                        |
+| `windows.drivermodule.DriverModule`    | 読み込まれたドライバがルートキットによって隠されているかどうかを判断します。                                   |
 | `windows.driverscan.DriverScan`        | 特定のWindowsメモリイメージに存在するドライバをスキャンします。                                       |
+| `windows.dumpfiles.DumpFiles`          | Windowsのメモリサンプルからキャッシュされたファイルの内容をダンプします。                                 |
+| `windows.envars.Envars`                | プロセス環境変数を表示します。                                                      |
 | `windows.filescan.FileScan`            | 特定のWindowsメモリイメージに存在するファイルオブジェクトをスキャンします。                                  |
+| `windows.getservicesids.GetServiceSIDs`| プロセストークンのSIDをリストします。                                              |
+| `windows.getsids.GetSIDs`              | 各プロセスを所有するSIDを表示します。                                                 |
 | `windows.handles.Handles`              | プロセスのオープンハンドルをリストします。                                                  |
+| `windows.hashdump.Hashdump`            | メモリからユーザーハッシュをダンプします。                                                |
 | `windows.info.Info`                    | 解析中のメモリサンプルのOSおよびカーネルの詳細を表示します。                                           |
+| `windows.joblinks.JobLinks`            | プロセスのジョブリンク情報を表示します。                                                 |
+| `windows.ldrmodules.LdrModules`        | 特定のWindowsメモリイメージに読み込まれているモジュールをリストします。                                   |
+| `windows.lsadump.Lsadump`              | メモリからlsaシークレットをダンプします。                                                |
 | `windows.malfind.Malfind`              | 潜在的に注入されたコードが含まれるプロセスメモリ範囲をリストします。                                      |
-| `windows.moddump.ModDump`              | カーネルモジュールをダンプします。                                                     |
+| `windows.mbrscan.MBRScan`              | 潜在的なマスターブートレコード（MBR）をスキャンして解析します。                                       |
+| `windows.memmap.Memmap`                | メモリマップを表示します。                                                      |
+| `windows.mftscan.MFTScan`              | 特定のWindowsメモリイメージに存在するMFT FILEオブジェクトをスキャンします。                          |
 | `windows.modscan.ModScan`              | 特定のWindowsメモリイメージに存在するモジュールをスキャンします。                                      |
 | `windows.modules.Modules`              | 読み込まれているカーネルモジュールをリストします。                                                |
 | `windows.mutantscan.MutantScan`        | 特定のWindowsメモリイメージに存在するミューテックスをスキャンします。                                     |
-| `windows.poolscanner.PoolScanner`      | 汎用プールスキャナープラグイン。                                                     |
-| `windows.procdump.ProcDump`            | プロセスの実行可能イメージをダンプします。                                                |
+| `windows.netscan.NetScan`              | 特定のWindowsメモリイメージに存在するネットワークオブジェクトをスキャンします。                                 |
+| `windows.netstat.NetStat`              | 特定のWindowsメモリイメージに存在するネットワーク追跡構造を走査します。                                 |
+| `windows.poolscanner.PoolScanner`      | 汎用プールスキャナプラグインです。                                                   |
+| `windows.privileges.Privs`             | プロセストークンの特権をリストします。                                                  |
 | `windows.pslist.PsList`                | 特定のWindowsメモリイメージに存在するプロセスをリストします。                                        |
 | `windows.psscan.PsScan`                | 特定のWindowsメモリイメージに存在するプロセスをスキャンします。                                        |
 | `windows.pstree.PsTree`                | 親プロセスIDに基づいてプロセスをツリー形式でリストします。                                           |
@@ -53,16 +69,19 @@
 | `windows.registry.hivescan.HiveScan`   | 特定のWindowsメモリイメージに存在するレジストリハイブをスキャンします。                                    |
 | `windows.registry.printkey.PrintKey`   | ハイブまたは特定のキー値の下のレジストリキーをリストします。                                         |
 | `windows.registry.userassist.UserAssist`| ユーザーアシストレジストリキーと情報を表示します。                                              |
+| `windows.sessions.Sessions`            | 環境変数から抽出されたセッション情報を持つプロセスをリストします。                                       |
+| `windows.skeleton_key_check.Skeleton_Key_Check`| スケルトンキーのマルウェアの兆候を探します。                                                |
 | `windows.ssdt.SSDT`                    | システムコールテーブルをリストします。                                                   |
-| `windows.statistics.Statistics`        | メモリサンプルに関する統計情報を表示します。                                               |
+| `windows.statistics.Statistics`        | メモリ空間に関する統計情報をリストします。                                               |
 | `windows.strings.Strings`              | stringsコマンドの出力を読み込み、それぞれの文字列がどのプロセスに属しているかを示します。                           |
 | `windows.svcscan.SvcScan`              | Windowsサービスをスキャンします。                                                  |
 | `windows.symlinkscan.SymlinkScan`      | 特定のWindowsメモリイメージに存在するリンクをスキャンします。                                      |
-| `windows.vaddump.VadDump`              | プロセスメモリ範囲をダンプします。                                                 |
 | `windows.vadinfo.VadInfo`              | プロセスメモリ範囲をリストします。                                                  |
-| `windows.vadyarascan.VadYaraScan`      | YARAを使用して仮想アドレス記述子メモリマップをスキャンします。                                        |
-
-
+| `windows.vadwalk.VadWalk`              | VADツリーをウォークします。                                                     |
+| `windows.vadyarascan.VadYaraScan`      | YARAを使用して仮想アドレス記述子のメモリマップをスキャンします。                                      |
+| `windows.verinfo.VerInfo`              | PEファイルのバージョン情報をリストします。                                               |
+| `windows.virtmap.VirtMap`              | 仮想マップセクションをリストします。                                                 |
+| `yarascan.YaraScan`                    | YARAルール（文字列またはファイル）を使用してメモリをスキャンします。                                |
 
 
 ## エントリーキーの永続化調査
